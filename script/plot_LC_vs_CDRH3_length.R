@@ -36,11 +36,10 @@ plot_CDRH3_vs_LC_usage <- function(Ab_table, graphname){
                 axis.text.x.top=element_text(angle=90,hjust=1,vjust=0.5,size=textsize,face="bold",color='black')) +
           ylab("CDR H3 length") +
           xlab("")
-  ggsave(graphname,p,width=4,height=2.5,dpi=600)
+  ggsave(graphname,p,width=3.7,height=2.5,dpi=600)
   }
 
 Ab_table  <- read_tsv("result/LC_germline_vs_CDRH3_length.tsv")
 LC_germline_levels  <- sort(unique(Ab_table$LC_germline))
-Ab_table <- Ab_table %>%
-              mutate(LC_germline=factor(LC_germline,level=LC_germline_levels))
+Ab_table <- mutate(Ab_table, LC_germline=factor(LC_germline,level=LC_germline_levels))
 plot_CDRH3_vs_LC_usage(Ab_table, "graph/LC_usage_vs_CDRH3.png")

@@ -10,15 +10,18 @@ def LC_vs_CDRH3_count(in_filename, HC_germlines):
 		else:
 			entry = line.rstrip().rsplit("\t")
 			HC_germline = entry[1]
-			CDRH3 = entry[2]
-			LC_germline = entry[3]
-			Antigen_target = entry[5]
-			if '-' in CDRH3 or 'length' in CDRH3:
+			CDRH3 = entry[3]
+			LC_germline = entry[4]
+			if HC_germline not in HC_germlines:
 				continue
-			elif HC_germline in HC_germlines:
-				CDRH3_len = len(CDRH3)-2
-				ID = LC_germline+'__'+str(CDRH3_len)
-				summary_dict[ID] += 1
+			if '-' in CDRH3:
+				continue
+			if 'length' in CDRH3:
+				CDRH3_len = int(CDRH3.rsplit('=')[1])
+			else:
+				CDRH3_len = len(CDRH3)
+			ID = LC_germline+'__'+str(CDRH3_len)
+			summary_dict[ID] += 1
 	infile.close()
 	return summary_dict
 
@@ -34,7 +37,7 @@ def write_output(summary_dict, out_filename):
 	outfile.close()
 
 def main():
-	in_filename = "data/SARS-CoV-2_Abs_v12.tsv"
+	in_filename = "data/VH3-53_RBD_antibodies.tsv"
 	out_filename = "result/LC_germline_vs_CDRH3_length.tsv"
 	HC_germlines = ['IGHV3-53', 'IGHV3-66']
 	summary_dict = LC_vs_CDRH3_count(in_filename, HC_germlines)
