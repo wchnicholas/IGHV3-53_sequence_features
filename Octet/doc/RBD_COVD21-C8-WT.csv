@@ -1,0 +1,5 @@
+Include,Index,Color,Sensor Location,Sensor Type,Sensor Info,Replicate Group,Baseline Loc.,Assoc. (Sample) Loc.,Sample ID,Dissoc. Loc.,Loading Well Location,Loading Sample ID,Cycle,Conc. (nM),Response,KD (M),KD Error,kon(1/Ms),kon Error,kdis(1/s),kdis Error,RMax,RMax Error,kobs(1/s),Req,Req/Rmax(%),Full X^2,Full R^2,SSG KD,SSG Rmax,SSG R^2,
+x,0,-16776961,E1,SA (Streptavidin),,N/A,E9,E5,Antibody 2,E9,E2,,1,200,0.562,4.079E-09,5.027E-11,3.431E06,3.824E04,1.399E-02,7.356E-05,0.5627,0.0011,7.001E-01,0.5515,98.0,0.0478,0.9934, , , ,
+x,1,-16776961,F1,SA (Streptavidin),,N/A,F9,F5,Antibody 2,F9,F2,,1,100,0.5374,4.079E-09,5.027E-11,3.431E06,3.824E04,1.399E-02,7.356E-05,0.5509,0.0012,3.571E-01,0.5293,96.1,0.0478,0.9934, , , ,
+x,2,-16776961,G1,SA (Streptavidin),,N/A,G9,G5,Antibody 2,G9,G2,,1,50,0.4869,4.079E-09,5.027E-11,3.431E06,3.824E04,1.399E-02,7.356E-05,0.5229,0.0015,1.855E-01,0.4834,92.5,0.0478,0.9934, , , ,
+x,3,-16776961,H1,SA (Streptavidin),,N/A,H9,H5,Antibody 2,H9,H2,,1,25,0.4401,4.079E-09,5.027E-11,3.431E06,3.824E04,1.399E-02,7.356E-05,0.5184,0.0021,9.976E-02,0.4457,86.0,0.0478,0.9934, , , ,

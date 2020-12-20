@@ -1,0 +1,5 @@
+Include,Index,Color,Sensor Location,Sensor Type,Sensor Info,Replicate Group,Baseline Loc.,Assoc. (Sample) Loc.,Sample ID,Dissoc. Loc.,Loading Well Location,Loading Sample ID,Cycle,Conc. (nM),Response,KD (M),KD Error,kon(1/Ms),kon Error,kdis(1/s),kdis Error,RMax,RMax Error,kobs(1/s),Req,Req/Rmax(%),Full X^2,Full R^2,SSG KD,SSG Rmax,SSG R^2,
+x,0,-65536,A8,SA (Streptavidin),,N/A,A3,A7,7,A3,A2,,1,200,0.0813,3.040E-07,2.001E-08,3.198E05,2.059E04,9.724E-02,1.324E-03,0.2038,0.0093,1.612E-01,0.0808,39.7,0.0022,0.9929, , , ,
+x,1,-65536,B8,SA (Streptavidin),,N/A,B3,B7,7,B3,B2,,1,100,0.0433,3.040E-07,2.001E-08,3.198E05,2.059E04,9.724E-02,1.324E-03,0.1723,0.0096,1.292E-01,0.0427,24.8,0.0022,0.9929, , , ,
+x,2,-65536,C8,SA (Streptavidin),,N/A,C3,C7,7,C3,C2,,1,50,0.0265,3.040E-07,2.001E-08,3.198E05,2.059E04,9.724E-02,1.324E-03,0.1865,0.0118,1.132E-01,0.0263,14.1,0.0022,0.9929, , , ,
+x,3,-65536,D8,SA (Streptavidin),,N/A,D3,D7,7,D3,D2,,1,25,0.0134,3.040E-07,2.001E-08,3.198E05,2.059E04,9.724E-02,1.324E-03,0.1746,0.0122,1.052E-01,0.0133,7.6,0.0022,0.9929, , , ,
