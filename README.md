@@ -6,6 +6,7 @@
 ## Installation ##
 
 Easiest way to install PEAR is through [Anaconda](https://anaconda.org/bioconda/pear)
+
 And the following to install the needed package:
 ```
 conda install -c bioconda pear
@@ -20,4 +21,4 @@ conda install -c bioconda pear
 2. run analysis for the assembled files
     - go into ```/script/``` folder
     -run python script ```/script/fastq2count.py``` to count the frequence of each variant of CDRH3 loop
-    -run python script ```/script/merge&calculate.py``` to calculate the Index of relative frequency of output/input
+    -run python script ```/script/merge&calculate.py``` to calculate the relative enrichment of each variant
