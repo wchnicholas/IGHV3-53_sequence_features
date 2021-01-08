@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 
-def cal_RFindex(count_DF,column,input):
-    count_DF[column+'_RFindex'] = np.log10(((count_DF[column]+1)/(count_DF[column].sum(0)+143))/((count_DF[input]+1)/(count_DF[input].sum(0)+143)))
+def cal_enrich(count_DF,column,input):
+    count_DF[column+'_enrich'] = np.log10(((count_DF[column]+1)/(count_DF[column].sum(0)+143))/((count_DF[input]+1)/(count_DF[input].sum(0)+143)))
     return count_DF
 
 def cal_mean(count_DF,mean,column1,column2):
@@ -21,13 +21,13 @@ def main():
         print "processing file: %s" % (filename,)
     count_DF.columns = ['AA','input', 'exp_rep1','exp_rep2','bind_rep1','bind_rep2']#make CDRH3 variant count table
 
-    cal_RFindex(count_DF,'exp_rep1','input') #calculating and adding a new column of the exp_rep1 RFindex
-    cal_RFindex(count_DF,'exp_rep2','input')
-    cal_RFindex(count_DF,'bind_rep1','input')
-    cal_RFindex(count_DF,'bind_rep2','input')
-    cal_mean(count_DF,'exp_average_RFindex','exp_rep1_RFindex','exp_rep2_RFindex')
-    cal_mean(count_DF,'bind_average_RFindex','bind_rep1_RFindex','bind_rep2_RFindex')
-    count_DF.to_csv('result/CDR3_LIB_index.csv') #save dataframe to csv
+    cal_enrich(count_DF,'exp_rep1','input') #calculating and adding a new column of the exp_rep1 enrich
+    cal_enrich(count_DF,'exp_rep2','input')
+    cal_enrich(count_DF,'bind_rep1','input')
+    cal_enrich(count_DF,'bind_rep2','input')
+    cal_mean(count_DF,'exp_average_enrich','exp_rep1_enrich','exp_rep2_enrich')
+    cal_mean(count_DF,'bind_average_enrich','bind_rep1_enrich','bind_rep2_enrich')
+    count_DF.to_csv('result/CDR3_LIB_enrichment.csv') #save dataframe to csv
 
 if __name__ == "__main__":
   main()
